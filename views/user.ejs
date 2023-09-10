@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://localhost:3000/css/usersstyle.css">
+</head>
+<body>
+    <h1><%= user.fname %></h1>
+    <form action="/user/<%= user.id %>?method=put" method="post">
+        <input type="text" placeholder="id" name="id" value="<%= user.id %>">
+        <input type="text" placeholder="fname" name="fname" value="<%= user.fname %>">
+        <input type="text" placeholder="lname" name="lname" value="<%= user.lname %>">
+        <input type="text" placeholder="email" name="email" value="<%= user.email %>">
+        <input type="text" placeholder="password" name="password" value="<%= user.password %>">
+        <input type="submit" value="update">
+    </form>
+</body>
+</html>
